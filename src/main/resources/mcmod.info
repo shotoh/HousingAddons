@@ -1,14 +1,14 @@
 [
   {
-    "modid": "forgetemplate",
-    "name": "ForgeTemplate",
-    "description": "An example template",
+    "modid": "housingaddons",
+    "name": "HousingAddons",
+    "description": "Addons for Hypixel Housing",
     "version": "${version}",
     "mcversion": "${mcversion}",
     "url": "",
     "updateUrl": "",
     "authorList": [
-      ""
+      "shotoh"
     ],
     "credits": "",
     "logoFile": "",
