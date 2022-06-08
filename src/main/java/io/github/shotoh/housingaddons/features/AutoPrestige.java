@@ -11,7 +11,7 @@ public class AutoPrestige {
     private static long cooldown = 0;
 
     public static void check() {
-        if ((System.currentTimeMillis() - cooldown) / 1000.0 < 20) {
+        if ((System.currentTimeMillis() - cooldown) / 1000.0 > 20) {
             cooldown = System.currentTimeMillis();
             double delay = Math.random() * 10;
             pool.schedule(() -> Utils.sendCommand("/prestige"), (long) delay, TimeUnit.SECONDS);
