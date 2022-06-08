@@ -40,15 +40,15 @@ public class SimulatorCheck {
                             int operandIndex = Config.operandIndex;
                             if (operandIndex == 0) {
                                 if (keywordNumber > configNumber) {
-                                    Utils.alert(title, 20);
+                                    alert();
                                 }
                             } else if (operandIndex == 1) {
                                 if (keywordNumber == configNumber) {
-                                    Utils.alert(title, 20);
+                                    alert();
                                 }
                             } else if (operandIndex == 2) {
                                 if (keywordNumber < configNumber) {
-                                    Utils.alert(title, 20);
+                                    alert();
                                 }
                             }
                         } catch (NumberFormatException e) {
@@ -57,6 +57,13 @@ public class SimulatorCheck {
                     }
                 }
             }
+        }
+    }
+
+    private static void alert() {
+        Utils.alert(title, 20);
+        if (Config.autoPrestige) {
+            AutoPrestige.check();
         }
     }
 }

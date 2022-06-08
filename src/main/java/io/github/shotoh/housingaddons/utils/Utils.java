@@ -7,6 +7,10 @@ public class Utils {
         Minecraft.getMinecraft().thePlayer.playSound(sound, volume, pitch);
     }
 
+    public static void sendCommand(String command) {
+        Minecraft.getMinecraft().thePlayer.sendChatMessage(command);
+    }
+
     public static void alert(String title, int ticks) {
         Minecraft.getMinecraft().ingameGUI.displayTitle(title, "", 0, ticks, 0);
         Utils.playSound("note.pling", 1, 0.5f);

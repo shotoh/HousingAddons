@@ -12,7 +12,7 @@ public class Config extends Vigilant {
             name = "Enabled",
             category = "General",
             subcategory = "General",
-            description = "Whether the mod should be enabled"
+            description = "Whether the mod should be enabled."
     )
     public static boolean enabled = false;
     @Property(
@@ -20,7 +20,7 @@ public class Config extends Vigilant {
             name = "Keyword",
             category = "General",
             subcategory = "General",
-            description = "The keyword to find in the Hypixel scoreboard"
+            description = "The keyword to find in the Hypixel scoreboard."
     )
     public static String keyword = "";
     @Property(
@@ -28,7 +28,7 @@ public class Config extends Vigilant {
             name = "Operand",
             category = "General",
             subcategory = "General",
-            description = "The operand to use in the equation",
+            description = "The operand to use in the inequality.",
             options = {">", "=", "<"}
     )
     public static int operandIndex = 0;
@@ -37,9 +37,17 @@ public class Config extends Vigilant {
             name = "Number",
             category = "General",
             subcategory = "General",
-            description = "The number to compare in the equation"
+            description = "The number to compare in the inequality."
     )
     public static String number = "";
+    @Property(
+            type = PropertyType.SWITCH,
+            name = "Auto Prestige",
+            category = "General",
+            subcategory = "QOL",
+            description = "Whether the mod should automatically type /prestige after the inequality is met.\n§cThis feature is use at your own risk."
+    )
+    public static boolean autoPrestige = false;
 
     public Config() {
         super(new File("./config/housingaddons.toml"), "HousingAddons");
